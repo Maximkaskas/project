@@ -7,52 +7,62 @@
     <!-- Подключение шрифтов Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Общие стили с Google Fonts */
+        /* Общие стили */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
+            overflow-x: hidden;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            width: 100%;
+            padding: 0 20px;
         }
+        /* Стили для шапки */
         header {
             text-align: center;
-            padding: 50px 0;
+            padding: 20px 0;
             background-color: #f4f4f9;
+            border-bottom: 1px solid #ddd;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2em;
             color: #333;
         }
         header p {
-            font-size: 1.2em;
+            font-size: 1em;
             color: #666;
+            margin: 10px 0;
         }
+        /* Навигационное меню с рамками для кнопок */
         nav ul {
             display: flex;
             justify-content: center;
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
-            margin: 0 15px;
+            margin: 0 10px;
         }
         nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            transition: color 0.3s ease;
+            padding: 10px 15px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
         nav ul li a:hover {
-            color: #555;
+            color: #fff;
+            background-color: #333;
         }
+        /* Секции и их анимация */
         section {
-            margin: 40px 0;
+            margin: 40px auto;
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.6s ease, transform 0.6s ease;
@@ -69,13 +79,6 @@
             font-size: 1em;
             line-height: 1.6;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f4f4f9;
-            color: #333;
-            font-size: 0.9em;
-        }
         /* Стили для кнопки */
         .contact-button {
             display: inline-block;
@@ -90,6 +93,14 @@
         }
         .contact-button:hover {
             background-color: #555;
+        }
+        /* Подвал */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            font-size: 0.9em;
         }
         /* Адаптивные стили */
         @media (max-width: 600px) {
@@ -161,7 +172,6 @@
 
     <!-- Скрипт для анимации при прокрутке -->
     <script>
-        // Функция для отслеживания видимости элементов
         function revealOnScroll() {
             const sections = document.querySelectorAll('section');
             const windowHeight = window.innerHeight;
@@ -175,7 +185,6 @@
             });
         }
 
-        // Вызов функции при загрузке и прокрутке страницы
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
     </script>
