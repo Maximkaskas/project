@@ -120,22 +120,22 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
             text-align: left;
-            transition: background 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .service-block:hover {
-            background: linear-gradient(135deg, #333, #555);
-            transform: translateY(-5px);
+            background-color: #fff;
+            color: #000;
         }
         .service-block h3 {
             margin: 0;
             font-size: 1.2em;
             font-weight: bold;
-            color: #fff;
+            color: inherit;
         }
         .service-block p {
             margin-top: 10px;
             font-size: 0.95em;
-            color: #ccc;
+            color: inherit;
         }
         /* Секция портфолио с фотографиями */
         #portfolio {
@@ -184,17 +184,22 @@
             margin-left: auto;
             margin-right: auto;
         }
-        /* Остальные секции */
-        section {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+        /* Секция "Контакты" */
+        #contacts {
+            margin: 40px auto;
+            text-align: center;
         }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
+        #contacts h2 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
         }
-        /* Стили для кнопки */
+        #contacts p {
+            font-size: 1em;
+            color: #ccc;
+            line-height: 1.6;
+        }
         .contact-button {
             display: inline-block;
             margin-top: 20px;
@@ -320,6 +325,15 @@
             </div>
         </section>
         
+        <!-- Раздел "Контакты" -->
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <p>Если вы хотите обсудить проект или задать вопрос, пожалуйста, свяжитесь со мной:</p>
+            <p>Email: maximstepanov@mail.ru</p>
+            <p>Телефон: +7 123 456 7890</p>
+            <a href="mailto:maximstepanov@mail.ru" class="contact-button">Написать мне</a>
+        </section>
+
         <!-- Подвал -->
         <footer>
             <p>&copy; 2024 Степанов Максим. Все права защищены.</p>
