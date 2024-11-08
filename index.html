@@ -13,8 +13,8 @@
             font-family: Arial, sans-serif;
         }
         body {
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #000;
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,37 +24,61 @@
         .container {
             width: 90%;
             max-width: 700px;
-            background: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #1c1c1c;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             padding: 20px;
             border-radius: 8px;
             text-align: center;
+            position: relative;
         }
-        /* Заголовок и описание */
-        .title {
-            font-size: 2em;
+        /* Верхний левый блок */
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: left;
+        }
+        .header .title {
+            font-size: 1.8em;
             font-weight: bold;
-            margin-bottom: 0.5em;
+            color: #fff;
         }
-        .subtitle {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 1.5em;
+        .header .subtitle {
+            font-size: 1em;
+            color: #ddd;
+            margin-bottom: 1em;
         }
-        /* Блок "Обо мне" */
-        .about-me {
-            margin-bottom: 1.5em;
+        .nav {
+            margin-top: 1em;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 10px;
+            font-size: 1em;
+            background: #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #555;
+        }
+        /* Секции */
+        section {
+            margin-top: 2em;
+        }
+        /* Секции "Обо мне", "Услуги", "Контакты" */
+        .about-me, .services, .contact {
             line-height: 1.6;
-        }
-        /* Услуги */
-        .services {
             margin-bottom: 1.5em;
         }
-        .services h3 {
+        .services h3, .contact h3 {
             font-size: 1.3em;
-            color: #444;
+            color: #f1f1f1;
             margin-bottom: 0.5em;
         }
+        /* Список услуг */
         .services ul {
             list-style: none;
         }
@@ -62,15 +86,7 @@
             margin: 0.5em 0;
             font-size: 1em;
         }
-        /* Контактные данные */
-        .contact {
-            margin-top: 1.5em;
-        }
-        .contact h3 {
-            font-size: 1.3em;
-            color: #444;
-            margin-bottom: 0.5em;
-        }
+        /* Контакты */
         .contact a {
             text-decoration: none;
             color: #007bff;
@@ -95,17 +111,25 @@
 </head>
 <body>
     <div class="container">
-        <!-- Заголовок -->
-        <h1 class="title">Ваше Имя</h1>
-        <p class="subtitle">Профессиональный переводчик</p>
-        
+        <!-- Верхний левый блок с именем, профессией и навигацией -->
+        <div class="header">
+            <h1 class="title">Ваше Имя</h1>
+            <p class="subtitle">Профессиональный переводчик</p>
+            <div class="nav">
+                <a href="#about-me">Обо мне</a>
+                <a href="#services">Услуги</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </div>
+
         <!-- Блок "Обо мне" -->
-        <section class="about-me">
+        <section id="about-me" class="about-me">
+            <h3>Обо мне</h3>
             <p>Здравствуйте! Я профессиональный переводчик с многолетним опытом работы в переводах текстов, документов и личных материалов. Я специализируюсь на переводах с английского, французского и испанского языков.</p>
         </section>
-        
+
         <!-- Услуги -->
-        <section class="services">
+        <section id="services" class="services">
             <h3>Услуги</h3>
             <ul>
                 <li>Перевод документов</li>
@@ -114,9 +138,9 @@
                 <li>Синхронный перевод</li>
             </ul>
         </section>
-        
+
         <!-- Контактные данные -->
-        <section class="contact">
+        <section id="contact" class="contact">
             <h3>Контакты</h3>
             <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
             <p>Телефон: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
