@@ -3,149 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ваше Имя - Переводчик</title>
+    <title>Визитка переводчика</title>
     <style>
         /* Общие стили */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            color: #333;
         }
-        body {
-            background-color: #000;
-            color: #fff;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #f4f4f9;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        nav ul {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            list-style-type: none;
+            padding: 0;
         }
-        /* Контейнер */
-        .container {
-            width: 90%;
-            max-width: 700px;
-            background: #1c1c1c;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            position: relative;
+        nav ul li {
+            margin: 0 15px;
         }
-        /* Верхний левый блок */
-        .header {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            text-align: left;
-        }
-        .header .title {
-            font-size: 1.8em;
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
             font-weight: bold;
-            color: #fff;
         }
-        .header .subtitle {
-            font-size: 1em;
-            color: #ddd;
-            margin-bottom: 1em;
-        }
-        .nav {
-            margin-top: 1em;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #007bff;
-            margin-right: 10px;
-            font-size: 1em;
-            background: #333;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        .nav a:hover {
-            background-color: #555;
-        }
-        /* Секции */
         section {
-            margin-top: 2em;
+            margin: 40px 0;
         }
-        /* Секции "Обо мне", "Услуги", "Контакты" */
-        .about-me, .services, .contact {
+        h2 {
+            color: #333;
+        }
+        p, li {
+            font-size: 1em;
             line-height: 1.6;
-            margin-bottom: 1.5em;
         }
-        .services h3, .contact h3 {
-            font-size: 1.3em;
-            color: #f1f1f1;
-            margin-bottom: 0.5em;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            font-size: 0.9em;
         }
-        /* Список услуг */
-        .services ul {
-            list-style: none;
-        }
-        .services li {
-            margin: 0.5em 0;
-            font-size: 1em;
-        }
-        /* Контакты */
-        .contact a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        /* Кнопка */
-        .contact-btn {
+        /* Стили для кнопки */
+        .contact-button {
             display: inline-block;
-            margin-top: 1em;
+            margin-top: 20px;
             padding: 10px 20px;
-            background-color: #007bff;
             color: #fff;
-            border: none;
-            border-radius: 4px;
+            background-color: #333;
             text-decoration: none;
-            font-size: 1em;
-            transition: background-color 0.3s;
+            font-weight: bold;
+            border-radius: 5px;
         }
-        .contact-btn:hover {
-            background-color: #0056b3;
+        .contact-button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Верхний левый блок с именем, профессией и навигацией -->
-        <div class="header">
-            <h1 class="title">Ваше Имя</h1>
-            <p class="subtitle">Профессиональный переводчик</p>
-            <div class="nav">
-                <a href="#about-me">Обо мне</a>
-                <a href="#services">Услуги</a>
-                <a href="#contact">Контакты</a>
-            </div>
-        </div>
-
-        <!-- Блок "Обо мне" -->
-        <section id="about-me" class="about-me">
-            <h3>Обо мне</h3>
-            <p>Здравствуйте! Я профессиональный переводчик с многолетним опытом работы в переводах текстов, документов и личных материалов. Я специализируюсь на переводах с английского, французского и испанского языков.</p>
+        <!-- Шапка сайта -->
+        <header>
+            <h1>Алексей Иванов</h1>
+            <p>Профессиональный переводчик с опытом более 10 лет</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Раздел "Обо мне" -->
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Меня зовут Алексей Иванов, я профессиональный переводчик с более чем десятилетним опытом работы в области перевода текстов, документов и мультимедийного контента. Специализируюсь на переводах с английского на русский и обратно, владею различными тематиками и стилями.</p>
         </section>
-
-        <!-- Услуги -->
-        <section id="services" class="services">
-            <h3>Услуги</h3>
+        
+        <!-- Раздел "Услуги" -->
+        <section id="services">
+            <h2>Услуги</h2>
             <ul>
-                <li>Перевод документов</li>
-                <li>Литературный перевод</li>
-                <li>Технический перевод</li>
-                <li>Синхронный перевод</li>
+                <li>Перевод текстов (научные, технические, литературные)</li>
+                <li>Редактирование и корректура переводов</li>
+                <li>Синхронный и последовательный перевод</li>
+                <li>Локализация веб-сайтов и приложений</li>
             </ul>
         </section>
-
-        <!-- Контактные данные -->
-        <section id="contact" class="contact">
-            <h3>Контакты</h3>
-            <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
-            <p>Телефон: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-            <a href="mailto:yourname@example.com" class="contact-btn">Связаться со мной</a>
+        
+        <!-- Раздел "Портфолио" -->
+        <section id="portfolio">
+            <h2>Портфолио</h2>
+            <p>Выполнял переводы для таких компаний, как ABC Corp, XYZ Inc., а также для множества частных клиентов. В портфолио представлены примеры переводов документов, статей, и материалов для веб-сайтов. Могу предоставить портфолио по запросу.</p>
         </section>
+        
+        <!-- Раздел "Контакты" -->
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <p>Если вы хотите обсудить проект или задать вопрос, пожалуйста, свяжитесь со мной:</p>
+            <p>Email: alexey.ivanov@example.com</p>
+            <p>Телефон: +7 123 456 7890</p>
+            <a href="mailto:alexey.ivanov@example.com" class="contact-button">Написать мне</a>
+        </section>
+        
+        <!-- Подвал -->
+        <footer>
+            <p>&copy; 2023 Алексей Иванов. Все права защищены.</p>
+        </footer>
     </div>
 </body>
 </html>
