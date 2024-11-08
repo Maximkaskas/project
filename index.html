@@ -110,12 +110,11 @@
             margin-bottom: 20px;
         }
         .services-grid {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
         .service-block {
-            flex: 1 1 calc(50% - 20px);
             background-color: #111;
             padding: 20px;
             border-radius: 8px;
@@ -124,8 +123,8 @@
             transition: background 0.3s ease, transform 0.3s ease;
         }
         .service-block:hover {
-            transform: translateY(-5px);
             background: linear-gradient(135deg, #333, #555);
+            transform: translateY(-5px);
         }
         .service-block h3 {
             margin: 0;
@@ -151,12 +150,13 @@
         }
         .portfolio-grid {
             display: flex;
-            flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            flex-wrap: nowrap;
         }
         .portfolio-item {
-            flex: 1 1 calc(50% - 20px);
+            flex: 1;
+            max-width: 200px;
             background-color: #111;
             padding: 15px;
             border-radius: 8px;
@@ -172,6 +172,17 @@
         .portfolio-item p {
             font-size: 0.9em;
             color: #ccc;
+        }
+        /* Дополнительное описание под фото в портфолио */
+        .portfolio-description {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #ccc;
+            text-align: center;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         /* Остальные секции */
         section {
@@ -225,9 +236,8 @@
                 margin-top: 20px;
                 max-width: 100%;
             }
-            .service-block,
-            .portfolio-item {
-                flex: 1 1 100%;
+            .portfolio-grid {
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -304,6 +314,9 @@
                     <img src="фото4.jpg" alt="Проект 4">
                     <p>Описание проекта 4</p>
                 </div>
+            </div>
+            <div class="portfolio-description">
+                <p>Дополнительное описание: опыт работы с различными проектами позволяет мне адаптировать переводы под конкретные потребности клиента и культурные особенности целевой аудитории.</p>
             </div>
         </section>
         
