@@ -98,6 +98,36 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
         }
+        /* Секция услуг в виде квадратных блоков */
+        #services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px auto;
+        }
+        .service-block {
+            flex: 1 1 calc(50% - 20px);
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        .service-block:hover {
+            transform: translateY(-10px);
+        }
+        .service-block h3 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        .service-block p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #ccc;
+        }
         /* Остальные секции */
         section {
             opacity: 0;
@@ -127,9 +157,9 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #111;
             color: #ccc;
             font-size: 0.9em;
+            font-style: italic;
         }
         /* Адаптивные стили */
         @media (max-width: 768px) {
@@ -149,6 +179,9 @@
                 margin-left: 0;
                 margin-top: 20px;
                 max-width: 100%;
+            }
+            .service-block {
+                flex: 1 1 100%;
             }
         }
     </style>
@@ -180,19 +213,29 @@
                 <p>Меня зовут Степанов Максим, я профессиональный переводчик с более чем пятилетним опытом работы в области перевода текстов, документов и мультимедийного контента. Специализируюсь на переводах с английского на русский и обратно, владею различными тематиками и стилями.</p>
             </div>
             <div class="about-photo">
-                <img src="/images/perevodjik_photo.png" alt="Фото переводчика">
+                <img src="ваша_фотография.jpg" alt="Фото переводчика">
             </div>
         </section>
         
-        <!-- Остальные разделы -->
+        <!-- Раздел "Услуги" с квадратными блоками -->
         <section id="services">
             <h2>Услуги</h2>
-            <ul>
-                <li>Перевод текстов (научные, технические, литературные)</li>
-                <li>Редактирование и корректура переводов</li>
-                <li>Синхронный и последовательный перевод</li>
-                <li>Локализация веб-сайтов и приложений</li>
-            </ul>
+            <div class="service-block">
+                <h3>Перевод текстов</h3>
+                <p>Перевод научных, технических и литературных текстов с английского на русский и наоборот.</p>
+            </div>
+            <div class="service-block">
+                <h3>Редактирование и корректура</h3>
+                <p>Профессиональная корректура и редактирование переведенных текстов для повышения качества.</p>
+            </div>
+            <div class="service-block">
+                <h3>Синхронный перевод</h3>
+                <p>Синхронный и последовательный перевод для встреч, конференций и других мероприятий.</p>
+            </div>
+            <div class="service-block">
+                <h3>Локализация</h3>
+                <p>Локализация веб-сайтов и приложений для русскоязычной аудитории.</p>
+            </div>
         </section>
         
         <section id="portfolio">
