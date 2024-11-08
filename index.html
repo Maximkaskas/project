@@ -40,6 +40,7 @@
             padding: 20px 0;
             border-bottom: 1px solid #333;
         }
+        /* Левая часть с именем и описанием */
         .header-left {
             display: flex;
             flex-direction: column;
@@ -56,6 +57,7 @@
             margin: 5px 0 0;
             max-width: 300px;
         }
+        /* Навигационное меню */
         nav ul {
             display: flex;
             gap: 15px;
@@ -76,7 +78,7 @@
             background-color: #fff;
             color: #000;
         }
-        /* Секция "Обо мне" */
+        /* Секция "Обо мне" с фотографией */
         #about {
             display: flex;
             align-items: center;
@@ -106,7 +108,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
         }
-        /* Секция услуг */
+        /* Секция услуг в виде квадратных блоков */
         #services {
             margin: 40px auto;
         }
@@ -134,15 +136,33 @@
             background-color: #fff;
             color: #000;
         }
-        /* Секция портфолио */
+        .service-block h3 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: inherit;
+        }
+        .service-block p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: inherit;
+        }
+        /* Секция портфолио с фотографиями */
         #portfolio {
             margin: 40px auto;
             text-align: center;
+        }
+        #portfolio h2 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
         }
         .portfolio-grid {
             display: flex;
             gap: 20px;
             justify-content: center;
+            flex-wrap: nowrap;
         }
         .portfolio-item {
             flex: 1;
@@ -159,6 +179,11 @@
             margin-bottom: 10px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
         }
+        .portfolio-item p {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        /* Дополнительное описание под фото в портфолио */
         .portfolio-description {
             margin-top: 20px;
             font-size: 1em;
@@ -179,6 +204,11 @@
             font-weight: 700;
             color: #fff;
             margin-bottom: 20px;
+        }
+        #contacts p {
+            font-size: 1em;
+            color: #ccc;
+            line-height: 1.6;
         }
         .contact-button {
             display: inline-block;
@@ -207,6 +237,20 @@
             .header-left h1 {
                 font-size: 1.5em;
             }
+            .header-left p {
+                font-size: 0.85em;
+            }
+            nav ul {
+                gap: 10px;
+            }
+            #about {
+                flex-direction: column;
+            }
+            #about .about-photo {
+                margin-left: 0;
+                margin-top: 20px;
+                max-width: 100%;
+            }
             .portfolio-grid {
                 flex-wrap: wrap;
             }
@@ -216,7 +260,7 @@
 <body>
     <div class="container">
         <!-- Шапка сайта -->
-        <header class="fade-in">
+        <header>
             <div class="header-left">
                 <h1>Степанов Максим</h1>
                 <p>Профессиональный переводчик с опытом более 5 лет</p>
@@ -231,42 +275,72 @@
             </nav>
         </header>
         
-        <!-- Раздел "Обо мне" -->
-        <section id="about" class="fade-in">
-            <h2>Обо мне</h2>
-            <p>Меня зовут Степанов Максим, я профессиональный переводчик...</p>
+        <!-- Раздел "Обо мне" с фото -->
+        <section id="about">
+            <div class="about-text">
+                <h2>Обо мне</h2>
+                <p>Меня зовут Степанов Максим, я профессиональный переводчик с более чем пятилетним опытом работы в области перевода текстов, документов и мультимедийного контента. Специализируюсь на переводах с английского на русский и обратно, владею различными тематиками и стилями.</p>
+            </div>
+            <div class="about-photo">
+                <img src="ваша_фотография.jpg" alt="Фото переводчика">
+            </div>
         </section>
-
-        <!-- Раздел "Услуги" -->
-        <section id="services" class="fade-in">
+        
+        <!-- Раздел "Услуги" с квадратными блоками -->
+        <section id="services">
             <h2>Услуги</h2>
             <div class="services-grid">
                 <div class="service-block">
                     <h3>Перевод текстов</h3>
-                    <p>Перевод научных и технических текстов...</p>
+                    <p>Перевод научных, технических и литературных текстов с английского на русский и наоборот.</p>
                 </div>
                 <div class="service-block">
-                    <h3>Редактирование</h3>
-                    <p>Корректура и редактирование переводов...</p>
+                    <h3>Редактирование и корректура</h3>
+                    <p>Профессиональная корректура и редактирование переведенных текстов для повышения качества.</p>
+                </div>
+                <div class="service-block">
+                    <h3>Синхронный перевод</h3>
+                    <p>Синхронный и последовательный перевод для встреч, конференций и других мероприятий.</p>
+                </div>
+                <div class="service-block">
+                    <h3>Локализация</h3>
+                    <p>Локализация веб-сайтов и приложений для русскоязычной аудитории.</p>
                 </div>
             </div>
         </section>
-
-        <!-- Раздел "Портфолио" -->
-        <section id="portfolio" class="fade-in">
+        
+        <!-- Раздел "Портфолио" с фотографиями -->
+        <section id="portfolio">
             <h2>Портфолио</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <img src="фото1.jpg" alt="Проект 1">
                     <p>Описание проекта 1</p>
                 </div>
+                <div class="portfolio-item">
+                    <img src="фото2.jpg" alt="Проект 2">
+                    <p>Описание проекта 2</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="фото3.jpg" alt="Проект 3">
+                    <p>Описание проекта 3</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="фото4.jpg" alt="Проект 4">
+                    <p>Описание проекта 4</p>
+                </div>
+            </div>
+            <div class="portfolio-description">
+                <p>Дополнительное описание: опыт работы с различными проектами позволяет мне адаптировать переводы под конкретные потребности клиента и культурные особенности целевой аудитории.</p>
             </div>
         </section>
-
+        
         <!-- Раздел "Контакты" -->
-        <section id="contacts" class="fade-in">
+        <section id="contacts">
             <h2>Контакты</h2>
+            <p>Если вы хотите обсудить проект или задать вопрос, пожалуйста, свяжитесь со мной:</p>
             <p>Email: maximstepanov@mail.ru</p>
+            <p>Телефон: +7 123 456 7890</p>
             <a href="mailto:maximstepanov@mail.ru" class="contact-button">Написать мне</a>
         </section>
 
@@ -276,8 +350,42 @@
         </footer>
     </div>
 
-    <!-- Скрипт для плавной анимации с использованием Intersection Observer -->
+    <!-- Скрипт для плавной анимации прокрутки и появления секций -->
     <script>
+        function revealOnScroll() {
+            const sections = document.querySelectorAll('section');
+            const windowHeight = window.innerHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        function smoothScroll(event) {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
+
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', smoothScroll);
+        });
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+    
+    <!-- Вставка скрипта анимации Intersection Observer перед закрывающим тегом body -->
+     <script>
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -290,15 +398,6 @@
 
         document.querySelectorAll('.fade-in').forEach(section => {
             observer.observe(section);
-        });
-
-        // Плавный скролл для навигации
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(event) {
-                event.preventDefault();
-                const targetId = anchor.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-            });
         });
     </script>
 </body>
