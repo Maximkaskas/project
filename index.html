@@ -3,126 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дмитрий Мосолов</title>
+    <title>Ваше Имя - Переводчик</title>
     <style>
-        body {
+        /* Общие стили */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #f5f5f5;
+        }
+        body {
+            background-color: #f4f4f9;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
         }
+        /* Контейнер */
         .container {
-            text-align: center;
-            max-width: 800px;
+            width: 90%;
+            max-width: 700px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            border-radius: 8px;
+            text-align: center;
         }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #cccccc;
-        }
-        .header h1 {
-            color: #fff;
-            font-weight: normal;
-        }
-        .header .phone {
-            font-size: 1em;
-            color: #f5f5f5;
-            background-color: #898989;
-            padding: 10px;
-            border-radius: 20px;
-            text-decoration: none;
-        }
+        /* Заголовок и описание */
         .title {
             font-size: 2em;
-            margin: 20px 0;
-        }
-        .highlight {
-            color: #d4af37;
             font-weight: bold;
+            margin-bottom: 0.5em;
         }
-        .cta-button {
-            display: inline-block;
-            background-color: #d4af37;
-            color: #000;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1em;
-            text-decoration: none;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-        .steps {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-        .step {
-            max-width: 200px;
-        }
-        .step-number {
-            font-size: 1.5em;
-            color: #d4af37;
-        }
-        .step-description {
-            color: #cccccc;
-            font-size: 0.9em;
-        }
-        .profile {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .profile img {
-            width: 200px;
-            border-radius: 10px;
-        }
-        .profile-name {
-            margin-top: 10px;
+        .subtitle {
             font-size: 1.2em;
-            font-weight: bold;
+            color: #666;
+            margin-bottom: 1.5em;
         }
-        .profile-title {
-            color: #cccccc;
+        /* Блок "Обо мне" */
+        .about-me {
+            margin-bottom: 1.5em;
+            line-height: 1.6;
+        }
+        /* Услуги */
+        .services {
+            margin-bottom: 1.5em;
+        }
+        .services h3 {
+            font-size: 1.3em;
+            color: #444;
+            margin-bottom: 0.5em;
+        }
+        .services ul {
+            list-style: none;
+        }
+        .services li {
+            margin: 0.5em 0;
             font-size: 1em;
+        }
+        /* Контактные данные */
+        .contact {
+            margin-top: 1.5em;
+        }
+        .contact h3 {
+            font-size: 1.3em;
+            color: #444;
+            margin-bottom: 0.5em;
+        }
+        .contact a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        /* Кнопка */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .contact-btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Дмитрий Мосолов</h1>
-            <a href="tel:+79101385051" class="phone">+7 910 138 50 51</a>
-        </div>
-        <div class="title">
-            Выстроим грамотный отдел продаж в Вашей компании <span class="highlight">За 30 дней</span>
-        </div>
-        <a href="#" class="cta-button">Получить файл</a>
-        <div>Получите pdf-файл "Как мы выстраиваем нашу работу в 6 этапов"</div>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-description">Написание скриптов продаж под Ваш бизнес</div>
-            </div>
-            <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-description">Руководство отделом продаж, без текучки кадров</div>
-            </div>
-            <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-description">Подбор, обучение и мотивация для сотрудников</div>
-            </div>
-        </div>
-        <div class="profile">
-            <img src="path_to_image.jpg" alt="Дмитрий Мосолов">
-            <div class="profile-name">Дмитрий Мосолов</div>
-            <div class="profile-title">Специалист по коммерции</div>
-        </div>
+        <!-- Заголовок -->
+        <h1 class="title">Ваше Имя</h1>
+        <p class="subtitle">Профессиональный переводчик</p>
+        
+        <!-- Блок "Обо мне" -->
+        <section class="about-me">
+            <p>Здравствуйте! Я профессиональный переводчик с многолетним опытом работы в переводах текстов, документов и личных материалов. Я специализируюсь на переводах с английского, французского и испанского языков.</p>
+        </section>
+        
+        <!-- Услуги -->
+        <section class="services">
+            <h3>Услуги</h3>
+            <ul>
+                <li>Перевод документов</li>
+                <li>Литературный перевод</li>
+                <li>Технический перевод</li>
+                <li>Синхронный перевод</li>
+            </ul>
+        </section>
+        
+        <!-- Контактные данные -->
+        <section class="contact">
+            <h3>Контакты</h3>
+            <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+            <p>Телефон: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <a href="mailto:yourname@example.com" class="contact-btn">Связаться со мной</a>
+        </section>
     </div>
 </body>
 </html>
